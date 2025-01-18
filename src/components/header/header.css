@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+/* header */
+
+.container1 {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: auto;
+}
+.back {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(meeting.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* .child1 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+}
+.nav-links li {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+.nav-links button {
+  padding: 10px 30px;
+  font-size: 12px;
+  background: #00ae6c;
+  border: none;
+  color: white;
+} */
+
+/* .bar {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin: 4px 0;
+} */
+
+.content {
+  padding: 80px;
+}
+.content h1 {
+  font-size: 72px;
+  max-width: 668px;
+  line-height: 82px;
+  font-weight: 700;
+  color: white;
+}
+.content p {
+  font-size: 16px;
+  max-width: 500px;
+  font-weight: 400;
+}
+.btn {
+  padding-top: 60px;
+  display: flex;
+  gap: 40px;
+}
+.btn button {
+  padding: 10px 40px;
+  font-size: 12px;
+  background: #00ae6c;
+  border: none;
+}
+.btn h2 {
+  color: white;
+}
+.change {
+  color: white;
+  text-decoration-line: none;
+}
+
+.parent1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+.child1 h3 {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+}
+.nav_ul {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  position: relative;
+}
+.hamburger {
+  color: white;
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav_ul {
+    display: block;
+    background-color: red;
+    position: absolute;
+top: 55px;
+    padding: 20px;
+    right: -100% !important;
+    text-align: center;
+    width: 100%;
+    min-height: 500px;
+    /* overflow: hidden; */
+    transition: right 1s ease-in-out;
+  }
+  .nav_ul2 {
+    right: 0 !important;
+    transition: right 1s ease-in-out;
+  }
+  .nav_ul li{
+    padding: 20px;
+  }
+}
