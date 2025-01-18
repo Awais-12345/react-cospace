@@ -51,7 +51,7 @@ function Header() {
           </div>
 
           <div className="content">
-            <h1>Comfortable Coworking space</h1>
+            <h1>Comfortable Coworking sami khansas space</h1>
             {ObjHeaderP.map((text) =>
               <p>{text.paragraph}</p>
             )}
