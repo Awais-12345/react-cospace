@@ -51,11 +51,7 @@ function Header() {
           </div>
 
           <div className="content">
-<<<<<<< HEAD
-            <h1>Comfortable Coworking sami khansas space</h1>
-=======
             <h1>Comfortable Coworking space</h1>
->>>>>>> parent of 9cf7338 (samikhan)
             {ObjHeaderP.map((text) =>
               <p>{text.paragraph}</p>
             )}
