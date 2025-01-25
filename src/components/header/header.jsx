@@ -25,22 +25,20 @@ function Header() {
   }
   return (
     <div>
-      <div className="back">
-        <div className="container1">
+      <div className="back container-fluid">
+        <div className="container1 row">
           <div className="parent1">
-            <div className="child1">
+            <div className="child1 col">
               <h3>cospace</h3>
             </div>
-            <ul className={ `nav_ul ${isOpen && "nav_ul2"}`}>
+            <ul className={`nav_ul col  ${isOpen && "nav_ul2"}`}>
               <li><Link className='change' onClick={toggleNavbar} to={'/home'}>Home</Link></li>
               <li><Link className='change' onClick={toggleNavbar} to={'/features'}>Features</Link></li>
               <li><Link className='change' onClick={toggleNavbar} to={'/services'}>Services</Link></li>
               <li><Link className='change' onClick={toggleNavbar} to={'/about'}>About</Link></li>
               <li><Link className='change' onClick={toggleNavbar} to={'/location'}>Location</Link></li>
-              <li>
-
-              <Link className='change' onClick={toggleNavbar} to={'/button'}>Book now</Link>
-              </li>
+              <button><Link className='change' onClick={toggleNavbar} to={'/button'}>Book now</Link>
+              </button>
             </ul>
             <div className='hamburger'>
               {!isOpen ? 
@@ -50,7 +48,7 @@ function Header() {
             </div>
           </div>
 
-          <div className="content">
+          <div className="content col">
             <h1>Comfortable Coworking space</h1>
             {ObjHeaderP.map((text) =>
               <p>{text.paragraph}</p>
