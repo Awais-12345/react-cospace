@@ -1,9 +1,11 @@
 import React from 'react'
-import { ComponentFive } from '../components/component-five/componentfive'
+// import { ComponentFive } from '../components/component-five/componentfive'
+import { Contentfour } from "../components-2/content-four/contentfour";
 const Location = () => {
   return (
     <div>
-      <ComponentFive/>
+      {/* <ComponentFive/> */}
+      <Contentfour />
     </div>
   )
 }

@@ -1,45 +1,117 @@
-import React from 'react'
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import './contenttwo.css'
-const ContentTwo = () => {
-  return (
-    <div>
-      <div className='Container-fluid  background'>
-        <div className="row">
-          <div className="col">
-            <div className='main'>
-              <span>Book Now</span>
-              <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                <Form.Label column sm={1}>
-                  Email:
-                </Form.Label>
-                <Col sm={3}>
-                  <Form.Control type="email" placeholder="Email" />
-                </Col>
-              </Form.Group>
+import React from 'react';
+import { useFormik } from 'formik';
+import './contenttwo.css';
 
-              <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                <Form.Label column sm={1}>
+const ContentTwo = () => {
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    onSubmit: (values) => {
+      console.log('form value', values);
+    },
+    validate: (values) => {
+      let errors = {};
+      if (!values.email) {
+        errors.email = 'Required';
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+        errors.email = 'Invalid email address';
+      }
+      if (!values.password) {
+        errors.password = 'Required';
+      }
+      return errors;
+    },
+  });
+
+  return (
+    <div className="Container-fluid  background mb-5">
+      <div className="container">
+        <div className="row justify-content-end">
+          <div className="col-12 col-md-6">
+            <form className="p-4 bg-black opacity-75 rounded0" onSubmit={formik.handleSubmit}>
+              <h2 className="text-center text-white fw-bold mb-4">Book a Tour</h2>
+
+              {/* Email Input */}
+              <div className="mb-3 text-white">
+                <label htmlFor="email" className="form-label">
+                  Email:
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className={`form-control ${formik.errors.email ? 'is-invalid' : ''}`}
+                  placeholder="example@gmail.com"
+                  onChange={formik.handleChange}
+                  value={formik.values.email}
+                />
+                {formik.errors.email && <div className="invalid-feedback">{formik.errors.email}</div>}
+              </div>
+
+              {/* Password Input */}
+              <div className="mb-3 text-white">
+                <label htmlFor="password" className="form-label">
                   Password:
-                </Form.Label>
-                <Col sm={3}>
-                  <Form.Control type="password" placeholder="Password" />
-                </Col>
-              </Form.Group>
-              <Form.Select aria-label="Default select example">
-                <option>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </Form.Select>
-            </div>
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  className={`form-control ${formik.errors.password ? 'is-invalid' : ''}`}
+                  placeholder="Enter password"
+                  onChange={formik.handleChange}
+                  value={formik.values.password}
+                />
+                {formik.errors.password && <div className="invalid-feedback">{formik.errors.password}</div>}
+              </div>
+
+              {/* Date Selection */}
+              <div className="row mb-3 text-white">
+                <div className="col-6">
+                  <label className="form-label">Date-End:</label>
+                  <select className="form-select">
+                    <option>Select Date</option>
+                    {/* Map options dynamically */}
+                  </select>
+                </div>
+                <div className="col-6">
+                  <label className="form-label">Date-Start:</label>
+                  <select className="form-select">
+                    <option>Select Date</option>
+                    {/* Map options dynamically */}
+                  </select>
+                </div>
+              </div>
+
+              {/* Checkbox */}
+              <div className="form-check mb-3 text-white">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="policy"
+                  name="policy"
+                />
+                <label htmlFor="policy" className="form-check-label">
+                  I agree to the <span className="text-success">Terms of Service</span> and{' '}
+                  <span className="text-success">Privacy Policy</span> of cospace company
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="btn btn-success w-100 py-2 fw-bold text-white"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
-export { ContentTwo }
+export { ContentTwo };

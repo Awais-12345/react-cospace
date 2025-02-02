@@ -1,0 +1,101 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    
+  }
+.abc {
+  padding-bottom: 50px;
+}
+
+.abc h2 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 36px;
+  font-family: Poppins;
+  padding-bottom: 15px;
+}
+.abc p {
+  color: #525252;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+.card-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.card {
+  width: 30%;
+  margin: 0 5px;
+}
+/* .tex1{
+  color: rgba(0, 174, 108, 1);
+} */
+/* .card:hover {
+  transform: scale(1.2);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}  */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 0 0 50%;
+  max-width: 30%;
+  box-sizing: border-box;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}

@@ -12,13 +12,26 @@ import React from "react";
 import { Header } from "./components-2/header/header";
 import { Contentone } from "./components-2/content-one/contentone";
 import { ContentTwo } from "./components-2/content-two/contenttwo";
+import { Contentthree } from "./components-2/content-three/contentthree";
+import { Contentfour } from "./components-2/content-four/contentfour";
+import { Contentfive } from "./components-2/content-five/contentfive";
+import { Contentsix } from "./components-2/content-six/contentssix";
+import { Footer } from "./components-2/footer/footer";
+// import "./index.css";
+// import { Modal } from './component/modal';
+import { Button } from "./component/button";
 
 function App() {
   return (
     <div>
       <Header />
-      <Contentone/>
-      <ContentTwo/>
+      <Contentone />
+      <ContentTwo />
+      <Contentthree />
+      <Contentfour />
+      <Contentfive />
+      <Contentsix />
+      <Footer />
       {/* <BrowserRouter>
       <Header/>
         <Routes>
@@ -30,8 +43,10 @@ function App() {
         <Route path="/button" element={<Button/>}/>
         </Routes> 
         <Footer/>
-      </BrowserRouter>
-      <MainComponent/> */}
+      </BrowserRouter> */}
+      {/* <MainComponent/> */}
+      {/* <Modal /> */}
+      {/* <Button /> */}
     </div>
   );
 }
